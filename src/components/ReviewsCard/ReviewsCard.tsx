@@ -1,15 +1,14 @@
 import React from 'react';
-import './ReviewsCard.scss';
+import styles from './ReviewsCard.module.scss';
 import OverallRating from './OverallRating';
 import Comment from './Comment';
-import Pagination from './Pagination';
 
 const ReviewsCard = () => {
   return (
-    <div className="reviews-card">
-      <h3 className="reviews-card__title">Opiniones</h3>
+    <div className={styles.reviewsCard}>
+      <h3 className={styles.title}>Opiniones</h3>
       <OverallRating rating="Buena" emojiUrl="https://twemoji.maxcdn.com/v/latest/svg/1f600.svg" />
-      <div className="reviews-card__comments">
+      <div className={styles.comments}>
         <Comment
           avatarUrl="https://i.pinimg.com/736x/22/09/40/220940c0f1793771f5b51b01e5ecf3be.jpg"
           emojiUrl="https://twemoji.maxcdn.com/v/latest/svg/1f600.svg"
@@ -29,7 +28,6 @@ const ReviewsCard = () => {
           text="El restaurante ofrecía una selección impresionante de platos. El servicio fue amable y eficiente. ¡Una cena encantadora en un ambiente acogedor!"
         />
       </div>
-      <Pagination />
     </div>
   );
 };

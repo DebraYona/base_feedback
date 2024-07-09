@@ -1,5 +1,5 @@
 import React from 'react';
-import './OverallRating.scss';
+import styles from './OverallRating.module.scss';
 
 interface OverallRatingProps {
   rating: string;
@@ -8,9 +8,9 @@ interface OverallRatingProps {
 
 const OverallRating: React.FC<OverallRatingProps> = ({ rating, emojiUrl }) => {
   return (
-    <div className="overall-rating">
-      <img src={emojiUrl} alt="emoji" className="overall-rating__emoji" />
-      <span className="overall-rating__text">La experiencia fue: {rating}</span>
+    <div className={styles.overallRating}>
+      <img src={emojiUrl} alt="emoji" className={styles.emoji} />
+      <span className={styles.text}>La experiencia fue: {rating}</span>
     </div>
   );
 };

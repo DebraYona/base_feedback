@@ -1,5 +1,5 @@
 import React from 'react';
-import './Comment.scss';
+import styles from './Comment.module.scss';
 
 interface CommentProps {
   avatarUrl: string;
@@ -10,16 +10,16 @@ interface CommentProps {
 
 const Comment: React.FC<CommentProps> = ({ avatarUrl, rating, text, emojiUrl }) => {
   return (
-    <div className="comment">
-      <div className="comment__avatar-container">
-        <div className="comment__avatar" style={{ backgroundImage: `url(${avatarUrl})` }} />
-        <img src={emojiUrl} alt="emoji" className="comment__emoji" />
+    <div className={styles.comment}>
+      <div className={styles.avatarContainer}>
+        <div className={styles.avatar} style={{ backgroundImage: `url(${avatarUrl})` }} />
+        <img src={emojiUrl} alt="emoji" className={styles.emoji} />
       </div>
-      <div className="comment__content">
-        <div className="comment__header">
-          <span className="comment__rating">{rating}</span>
+      <div className={styles.content}>
+        <div className={styles.header}>
+          <span className={styles.rating}>{rating}</span>
         </div>
-        <p className="comment__text">{text}</p>
+        <p className={styles.text}>{text}</p>
       </div>
     </div>
   );
