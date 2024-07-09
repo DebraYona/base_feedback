@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+.reservation-card {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: 1px solid #e0e0e0;
+  padding: 20px;
+  font-family: 'Inter', sans-serif;
+  max-width: 350px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+
+    h3 {
+      margin: 0;
+      font-size: 14px;
+      color: #6d6d6d;
+      font-weight: 600;
+    }
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 18px;
+    font-weight: 600;
+    color: #000000;
+    margin-bottom: 15px;
+  }
+
+  &__status-container {
+    display: flex;
+    align-items: center;
+    background-color: #e0f8eb;
+    padding: 2px 8px;
+    border-radius: 12px;
+  }
+
+  &__status-icon {
+    color: #37d67a;
+    font-size: 16px;
+    margin-right: 5px;
+  }
+
+  &__status-text {
+    color: #37d67a;
+    font-size: 12px;
+  }
+
+  &__details {
+    margin-top: 15px;
+  }
+
+  &__detail {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #6d6d6d;
+
+    svg {
+      margin-right: 8px;
+      color: #6d6d6d;
+    }
+  }
+}
